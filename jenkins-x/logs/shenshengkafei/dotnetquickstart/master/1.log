@@ -1,0 +1,301 @@
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-8lvkr[0m
+{"level":"warn","ts":1567294238.169734,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567294238.1705756,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-tfnpk[0m
+{"level":"warn","ts":1567294240.70161,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567294240.7055247,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-shenshengkafei-dotnetquick-rzbcg[0m
+{"level":"warn","ts":1567294249.7390816,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567294250.5462012,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/dotnetquickstart.git @ 806c54d68d9a8296ec0c423f303d6a5ba489084e in path /workspace/source"}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:806c54d68d9a8296ec0c423f303d6a5ba489084e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.1 and written to file: ./VERSION
+Updating chart version in charts/dotnetquickstart/Chart.yaml to 0.0.1
+Updating repository in charts/dotnetquickstart/values.yaml to terraformoss.azurecr.io/**************/dotnetquickstart
+Updating tag in charts/dotnetquickstart/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for **************-dotnetquickstart-master-1
+Applying changes 
+upserted PipelineResource **************-dotnetquickstart for the git repository https://github.com/**************/dotnetquickstart.git
+upserted Task **************-dotnetquickstart-from-build-pack-1
+upserted Pipeline **************-dotnetquickstart-1
+created PipelineRun **************-dotnetquickstart-1
+created PipelineStructure **************-dotnetquickstart-1
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-v4822[0m
+{"level":"warn","ts":1567294266.7886949,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567294266.7889907,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xg4wd[0m
+{"level":"warn","ts":1567294269.4338124,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567294269.4389675,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/dotnetquickstart\""}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-shenshengkafei-dotnetquickstart-xfl8l[0m
+{"level":"warn","ts":1567294283.683736,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567294284.5177608,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/dotnetquickstart.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:806c54d68d9a8296ec0c423f303d6a5ba489084e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image microsoft/aspnetcore-build:2.0 
+2019/08/31 23:31:26 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:296a8da8c2b8eca576b54216ddddace273b0d96792e5cecf02f4fb242206accd: no such file or directory 
+[36mINFO[0m[0001] Downloading base image microsoft/aspnetcore-build:2.0 
+2019/08/31 23:31:27 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] Using files from context: [/workspace/source/aspnetapp.csproj] 
+[36mINFO[0m[0001] Checking for cached layer terraformoss.azurecr.io/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337... 
+[36mINFO[0m[0002] No cached layer found for cmd RUN dotnet restore 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN dotnet restore requires it. 
+[36mINFO[0m[0054] Taking snapshot of full filesystem...        
+[36mINFO[0m[0075] WORKDIR /app                                 
+[36mINFO[0m[0075] cmd: workdir                                 
+[36mINFO[0m[0075] Changed working directory to /app            
+[36mINFO[0m[0075] Creating directory /app                      
+[36mINFO[0m[0075] Taking snapshot of files...                  
+[36mINFO[0m[0075] Using files from context: [/workspace/source/aspnetapp.csproj] 
+[36mINFO[0m[0075] COPY *.csproj ./                             
+[36mINFO[0m[0075] Taking snapshot of files...                  
+[36mINFO[0m[0075] RUN dotnet restore                           
+[36mINFO[0m[0075] cmd: /bin/sh                                 
+[36mINFO[0m[0075] args: [-c dotnet restore]                    
+  Restoring packages for /app/aspnetapp.csproj...
+  Restoring packages for /app/aspnetapp.csproj...
+  Installing Microsoft.Extensions.FileSystemGlobbing 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Abstractions 2.0.0.
+  Installing Microsoft.VisualStudio.Web.CodeGeneration.Contracts 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Physical 2.0.0.
+  Installing Microsoft.VisualStudio.Web.CodeGeneration.Tools 2.0.0.
+  Restore completed in 2.87 sec for /app/aspnetapp.csproj.
+  Installing Microsoft.DotNet.PlatformAbstractions 2.0.0.
+  Installing Microsoft.Extensions.DependencyModel 2.0.0.
+  Installing System.Data.SqlClient 4.4.0.
+  Installing System.Security.Cryptography.Xml 4.4.0.
+  Installing Microsoft.AspNetCore.Mvc.Core 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.SqlServer 2.0.0.
+  Installing Microsoft.Extensions.Caching.SqlServer 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection 2.0.0.
+  Installing Microsoft.AspNetCore.All 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Xml 2.0.0.
+  Installing Microsoft.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Relational 2.0.0.
+  Installing Microsoft.AspNetCore.Razor.Language 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Tools 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Design 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.ViewFeatures 2.0.0.
+  Installing Microsoft.AspNetCore.Server.HttpSys 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Https 2.0.0.
+  Installing Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.0.
+  Installing Microsoft.Extensions.Configuration.FileExtensions 2.0.0.
+  Installing Microsoft.Extensions.Configuration.CommandLine 2.0.0.
+  Installing Microsoft.Extensions.Configuration.UserSecrets 2.0.0.
+  Installing Microsoft.Extensions.Logging 2.0.0.
+  Installing Microsoft.Extensions.Configuration.AzureKeyVault 2.0.0.
+  Installing Microsoft.Extensions.Logging.Configuration 2.0.0.
+  Installing Microsoft.Extensions.Caching.Redis 2.0.0.
+  Installing Microsoft.AspNetCore.Server.IISIntegration 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Json 2.0.0.
+  Installing Microsoft.Extensions.Logging.Console 2.0.0.
+  Installing Microsoft.AspNetCore.AzureAppServices.HostingStartup 2.0.0.
+  Installing Microsoft.Extensions.Logging.Debug 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Facebook 2.0.0.
+  Installing Microsoft.AspNetCore.Antiforgery 2.0.0.
+  Installing Microsoft.AspNetCore.AzureAppServicesIntegration 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor.ViewCompilation 2.0.0.
+  Installing Microsoft.AspNetCore.CookiePolicy 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Google 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authorization.Policy 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Core 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting.Server.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCaching.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Hosting 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.RazorPages 2.0.0.
+  Installing Microsoft.AspNetCore 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.MicrosoftAccount 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Twitter 2.0.0.
+  Installing Microsoft.Extensions.Caching.Memory 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Options.ConfigurationExtensions 2.0.0.
+  Installing Microsoft.AspNetCore.Cors 2.0.0.
+  Installing Microsoft.AspNetCore.Routing 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Extensions 2.0.0.
+  Installing Microsoft.Extensions.Localization.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Features 2.0.0.
+  Installing Microsoft.AspNetCore.HttpOverrides 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.Extensions 2.0.0.
+  Installing Microsoft.Extensions.WebEncoders 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Formatters.Json 2.0.0.
+  Installing Microsoft.AspNetCore.Identity 2.0.0.
+  Installing Microsoft.AspNetCore.Cryptography.KeyDerivation 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Core 2.0.0.
+  Installing Microsoft.Extensions.Hosting.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.OAuth 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Embedded 2.0.0.
+  Installing Microsoft.AspNetCore.Authorization 2.0.0.
+  Installing Microsoft.AspNetCore.Http 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc 2.0.0.
+  Installing Microsoft.AspNetCore.Routing.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Owin 2.0.0.
+  Installing Microsoft.AspNetCore.MiddlewareAnalysis 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Binder 2.0.0.
+  Installing Microsoft.Data.Sqlite 2.0.0.
+  Installing Microsoft.AspNetCore.Razor 2.0.0.
+  Installing Microsoft.Extensions.Configuration.Ini 2.0.0.
+  Installing Microsoft.AspNetCore.Localization.Routing 2.0.0.
+  Installing Microsoft.Extensions.Options 2.0.0.
+  Installing Microsoft.AspNetCore.Localization 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Sqlite 2.0.0.
+  Installing Microsoft.Extensions.Logging.Abstractions 2.0.0.
+  Installing Microsoft.Net.Http.Headers 2.0.0.
+  Installing Microsoft.AspNetCore.SpaServices 2.0.0.
+  Installing Microsoft.AspNetCore.WebSockets 2.0.0.
+  Installing Microsoft.AspNetCore.WebUtilities 2.0.0.
+  Installing Microsoft.AspNetCore.Http.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.OpenIdConnect 2.0.0.
+  Installing Microsoft.AspNetCore.DataProtection.AzureStorage 2.0.0.
+  Installing Microsoft.Extensions.Logging.AzureAppServices 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.Cookies 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Localization 2.0.0.
+  Installing Microsoft.AspNetCore.Authentication.JwtBearer 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics 2.0.0.
+  Installing Microsoft.AspNetCore.Html.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCaching 2.0.0.
+  Installing Microsoft.AspNetCore.ApplicationInsights.HostingStartup 2.0.0.
+  Installing Microsoft.Extensions.Localization 2.0.0.
+  Installing Microsoft.Extensions.Caching.Abstractions 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Cors 2.0.0.
+  Installing Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.DataAnnotations 2.0.0.
+  Installing Microsoft.Extensions.FileProviders.Composite 2.0.0.
+  Installing Microsoft.AspNetCore.ResponseCompression 2.0.0.
+  Installing Microsoft.Extensions.Identity.Stores 2.0.0.
+  Installing Microsoft.AspNetCore.Rewrite 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.ApiExplorer 2.0.0.
+  Installing Microsoft.AspNetCore.Session 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Abstractions 2.0.0.
+  Installing Microsoft.Extensions.Logging.TraceSource 2.0.0.
+  Installing Microsoft.AspNetCore.NodeServices 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor.Extensions 2.0.0.
+  Installing Microsoft.Data.Sqlite.Core 2.0.0.
+  Installing Microsoft.AspNetCore.Identity.EntityFrameworkCore 2.0.0.
+  Installing Microsoft.VisualStudio.Web.BrowserLink 2.0.0.
+  Installing Microsoft.AspNetCore.StaticFiles 2.0.0.
+  Installing Microsoft.Extensions.DiagnosticAdapter 2.0.0.
+  Installing Microsoft.Extensions.Configuration 2.0.0.
+  Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv 2.0.0.
+  Installing Microsoft.Extensions.Logging.EventSource 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.TagHelpers 2.0.0.
+  Installing Microsoft.CodeAnalysis.Razor 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Razor 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.Sqlite.Core 2.0.0.
+  Installing Microsoft.AspNetCore.Mvc.Formatters.Xml 2.0.0.
+  Installing Microsoft.AspNetCore.Razor.Runtime 2.0.0.
+  Installing Microsoft.EntityFrameworkCore.InMemory 2.0.0.
+  Installing Microsoft.Extensions.Identity.Core 2.0.0.
+  Generating MSBuild file /app/obj/aspnetapp.csproj.nuget.g.props.
+  Generating MSBuild file /app/obj/aspnetapp.csproj.nuget.g.targets.
+  Restore completed in 4.28 sec for /app/aspnetapp.csproj.
+[36mINFO[0m[0080] Taking snapshot of full filesystem...        
+[36mINFO[0m[0092] Pushing layer terraformoss.azurecr.io/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337 to cache now 
+[36mINFO[0m[0092] Using files from context: [/workspace/source] 
+2019/08/31 23:32:58 pushed blob: sha256:479d9f56a3c31ba4e5d72fd6d03ac9ee0b3865a1e28fa047e2feb112c703d317
+[36mINFO[0m[0092] COPY . ./                                    
+[36mINFO[0m[0092] Taking snapshot of files...                  
+[36mINFO[0m[0092] RUN dotnet publish -c Release -o out         
+[36mINFO[0m[0092] cmd: /bin/sh                                 
+[36mINFO[0m[0092] args: [-c dotnet publish -c Release -o out]  
+Microsoft (R) Build Engine version 15.7.179.6572 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+2019/08/31 23:33:01 pushed blob: sha256:3a08edb738daddbabc6abc840a92afc1f421b0ae6a996b93743fa5a13cec31e7
+  Restore completed in 81.67 ms for /app/aspnetapp.csproj.
+  Restore completed in 35.17 ms for /app/aspnetapp.csproj.
+2019/08/31 23:33:01 terraformoss.azurecr.io/todo/cache:f1f04048124d53ca1b50c7144568b37f68d1073917c01fa1c37c764e5e928337: digest: sha256:cca5c01ae5461bc1f2cf86dfa1abe1172a672f513e66c6010d448768fcfc6405 size: 429
+  aspnetapp -> /app/bin/Release/netcoreapp2.0/aspnetapp.dll
+  aspnetapp -> /app/out/
+[36mINFO[0m[0102] Taking snapshot of full filesystem...        
+[36mINFO[0m[0112] ignoring socket CoreFxPipe_root.F.b8chWRlb9Z9+OWmw6LCxMVL+d, not adding to tar 
+[36mINFO[0m[0112] Pushing layer terraformoss.azurecr.io/todo/cache:657a49e4b1eff8bb740fdef6905a06ccb83f5e56f96365bfc2e7c90135400ff7 to cache now 
+[36mINFO[0m[0112] ENTRYPOINT ["dotnet", "out/aspnetapp.dll"]   
+[36mINFO[0m[0112] No files changed in this command, skipping snapshotting. 
+2019/08/31 23:33:19 pushed blob: sha256:baa34675a476d9e4f5212b1e37ca342afaa3059beed7a4f40acbf3775caa4f50
+2019/08/31 23:33:19 pushed blob: sha256:ba26f2cb77efb84df5b51490c9b5644257ee8c656b205bba85b9cb4320993261
+2019/08/31 23:33:19 terraformoss.azurecr.io/todo/cache:657a49e4b1eff8bb740fdef6905a06ccb83f5e56f96365bfc2e7c90135400ff7: digest: sha256:70497e8bafde7719587226dfa21e7c2eaa8e447ac8ca37ee4b66ee6af37b4a93 size: 428
+2019/08/31 23:33:20 pushed blob: sha256:5e5984c1b6b2b72ac7e62b12292f310988920768d77010bc4c1aeafefda25ee6
+2019/08/31 23:33:20 pushed blob: sha256:533cf31c9df38cda54fdacad297925e0e79411e6b25ecc7f433a97363b0c9d56
+2019/08/31 23:33:20 pushed blob: sha256:fb5be82a709c5e78267d57263ad65c0f9579c0bf43d4046f41943fdb2f893cb2
+2019/08/31 23:33:20 pushed blob: sha256:ba26f2cb77efb84df5b51490c9b5644257ee8c656b205bba85b9cb4320993261
+2019/08/31 23:33:20 pushed blob: sha256:89ec74ccca8915b21701c7ad40da2836e53d3f6011c2cf9dedb8254cc5f9bd5a
+2019/08/31 23:33:21 pushed blob: sha256:4867c32ba582ce0af39ac32e2e7b571a8ac3230ae94cbe262055c608b341c391
+2019/08/31 23:33:21 pushed blob: sha256:9a8ea045c9261c180a34df19cfc9bb3c3f28f29b279bf964ee801536e8244f2f
+2019/08/31 23:33:22 pushed blob: sha256:1607093a898cc241de8712e4361dcd907898fff35b945adca42db3963f3827b3
+2019/08/31 23:33:22 pushed blob: sha256:9996a3dbf48fd91893eb58c8f1a41b6a61e782f464c1c3d555702b3aefc6aa7a
+2019/08/31 23:33:23 pushed blob: sha256:3a08edb738daddbabc6abc840a92afc1f421b0ae6a996b93743fa5a13cec31e7
+2019/08/31 23:33:23 pushed blob: sha256:1eebc8a262e7ad7ddb898a1e1ca5239b87e7eb58cdb5b347c1657ea79441bffc
+2019/08/31 23:33:23 pushed blob: sha256:55cbf04beb7001d222c71bfdeae780bda19d5cb37b8dbd65ff0d3e6a0b9b74e6
+2019/08/31 23:33:24 pushed blob: sha256:d4eee24d4dacb41c21411e0477a741655303cdc48b18a948632c31f0f3a70bb8
+2019/08/31 23:33:25 pushed blob: sha256:c0ece037099c52dc882a9bf0d053cc144b4b813547fb17c119344209597d21de
+2019/08/31 23:33:27 pushed blob: sha256:e626b8d73a892646c35204220977822512ef164668acc40ce997f124e190fe01
+2019/08/31 23:33:31 pushed blob: sha256:4d833e0fa2188e68647a4f4e71767f659ad2e94edd96bd48b75c4ba6daf266ce
+2019/08/31 23:33:32 terraformoss.azurecr.io/**************/dotnetquickstart:0.0.1: digest: sha256:0bb2f792fc06938d8fa3faac0e61dd5f6445c46b4caa621d190c4d79befc4b39 size: 2723
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/dotnetquickstart to an unshallow repository
+no previous commit version found so change diff unavailable
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file dotnetquickstart-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mshenshengkafei-dotnetquickstart-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app dotnetquickstart version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/**************/environment-monkeyfrost-staging/pull/1
+Added label  to Pull Request https://github.com/**************/environment-monkeyfrost-staging/pull/1
+Pull Request https://github.com/**************/environment-monkeyfrost-staging/pull/1 is merged at sha e6301f4d4e8044d8f8d259884da0839514c3afd2
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names dotnetquickstart, **-dotnetquickstart, **-staging-dotnetquickstart
